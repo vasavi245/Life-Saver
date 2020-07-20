@@ -7,6 +7,8 @@ import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
 import UserContext from "./context/UserContext";
 
+
+
 import "./style.css";
 
 export default function App() {
@@ -46,9 +48,11 @@ export default function App() {
       <BrowserRouter>
         <UserContext.Provider value={{ userData, setUserData }}>
           <Header />
+       
           <div className="container">
             <Switch>
               <Route exact path="/" component={Home} />
+          
               <Route path="/login" component={Login} />
               <Route path="/register" component={Register} />
             </Switch>

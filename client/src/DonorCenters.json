@@ -2,29 +2,29 @@
     {
         "id": 1,
         "title": "LifeBlood Perth CBD Donor Center",
-         "address": "Gordon Stephenson House, 1/140 William St, Perth WA 6000",
+         "address": "1/140 William St, Perth WA 6000",
          "phone": "131495",
          "Hours":[
              {
-             "monday": "9am-5:30pm"
+             "monday": " Monday : 9am to 5:30pm"
              },
              {
-                 "tuesday": "10am-6pm"
+                 "tuesday": " Tuesday: 10am to 6pm"
              },
              {
-                 "wednesday": "10am-6pm"
+                 "wednesday": " Wednesday: 10am to 6pm"
              },
              {
-                 "thursday": "7am-3pm"
+                 "thursday": " Thursday: 7am to 3pm"
              },
              {
-                 "friday": "7am-3pm"
+                 "friday": " Friday: 7am to 3pm"
              },
              {
-                 "saturday": "7am-3pm"
+                 "saturday": " Saturday: 7am to 3pm"
              },
              {
-                 "sunday":  "Closed"
+                 "sunday":  "Sunday: Closed"
              }
         ]
 
@@ -37,25 +37,25 @@
          "phone": "131495",
          "Hours":[
              {
-             "monday": "Closed"
+             "monday": "Monday: Closed"
              },
              {
-                 "tuesday": "10am-6pm"
+                 "tuesday": "Tuesday: 10am to 6pm"
              },
              {
-                 "wednesday": "7am-1pm"
+                 "wednesday": "Wednesday: 7am to 1pm"
              },
              {
-                 "thursday": "10am-6pm"
+                 "thursday": "Thursday: 10am to 6pm"
              },
              {
-                 "friday": "7am-2pm"
+                 "friday": "Friday: 7am to 2pm"
              },
              {
-                 "saturday": "7am-2pm"
+                 "saturday": " Saturday: 7am to 2pm"
              },
              {
-                 "sunday":  "Closed"
+                 "sunday":  "Sunday: Closed"
              }
         ]   
     },
@@ -66,112 +66,112 @@
          "phone": "131495",
          "Hours":[
              {
-             "monday": "9am-4pm"
+             "monday": "Monday: 9am to 4pm"
              },
              {
-                 "tuesday": "10:30am-6pm"
+                 "tuesday": "Tuesday: 10:30am to 6pm"
              },
              {
-                 "wednesday": "11am-6pm"
+                 "wednesday": "Wednesday: 11am to 6pm"
              },
              {
-                 "thursday": "7:30am-2pm"
+                 "thursday": "Thursday: 7:30am to 2pm"
              },
              {
-                 "friday": "7:30am-1:30pm"
+                 "friday": "Friday: 7:30am to 1:30pm"
              },
              {
-                 "saturday": "Closed"
+                 "saturday": "Saturday: Closed"
              },
              {
-                 "sunday":  "7am-2pm"
+                 "sunday":  "Sunday: 7am to 2pm"
              }
         ]
     },
     {
         "id": 4,
         "title": "LifeBlood Perth CBD Donor Center",
-         "address": "Gordon Stephenson House, 1/140 William St, Perth WA 6000",
+         "address": " 1/140 William St, Perth WA 6000",
          "phone": "131495",
          "Hours":[
              {
-             "Monday": "9am-5:30pm"
+             "Monday": "Monday: 9am to 5:30pm"
              },
              {
-                 "tuesday": "10am-6pm"
+                 "tuesday": "Tuesday: 10am to 6pm"
              },
              {
-                 "wednesday": "10am-6pm"
+                 "wednesday": "Wednesday: 10am to 6pm"
              },
              {
-                 "thursday": "7am-3pm"
+                 "thursday": "Thursday: 7am to 3pm"
              },
              {
-                 "friday": "7am-3pm"
+                 "friday": "Friday: 7am to 3pm"
              },
              {
-                 "saturday": "7am-3pm"
+                 "saturday": "Saturday: 7am to 3pm"
              },
              {
-                 "sunday":  "Closed"
+                 "sunday":  "Sunday: Closed"
              }
         ]
     },
     {
         "id": 5,
         "title": "LifeBlood Perth CBD Donor Center",
-         "address": "Gordon Stephenson House, 1/140 William St, Perth WA 6000",
+         "address": " 1/140 William St, Perth WA 6000",
          "phone": "131495",
          "Hours":[
              {
-             "Monday": "9am-5:30pm"
+             "Monday": "Monday: 9am to 5:30pm"
              },
              {
-                 "tuesday": "10am-6pm"
+                 "tuesday": "Tuesday: 10am to 6pm"
              },
              {
-                 "wednesday": "10am-6pm"
+                 "wednesday": "Wednesday: 10am to 6pm"
              },
              {
-                 "thursday": "7am-3pm"
+                 "thursday": "Thursday: 7am to 3pm"
              },
              {
-                 "friday": "7am-3pm"
+                 "friday": "Friday: 7am to 3pm"
              },
              {
-                 "saturday": "7am-3pm"
+                 "saturday": "Saturday: 7am to 3pm"
              },
              {
-                 "sunday":  "Closed"
+                 "sunday":  "Sunday: Closed"
              }
         ]
     },
     {
         "id": 6,
         "title": "LifeBlood Perth CBD Donor Center",
-         "address": "Gordon Stephenson House, 1/140 William St, Perth WA 6000",
+         "address": " 1/140 William St, Perth WA 6000",
          "phone": "131495",
          "Hours":[
              {
-             "Monday": "9am-5:30pm"
+             "Monday": "Monday: 9am to 5:30pm"
              },
              {
-                 "tuesday": "10am-6pm"
+                 "tuesday": "Tuesday: 10am to 6pm"
              },
              {
-                 "wednesday": "10am-6pm"
+                 "wednesday": "Wednesday: 10am to 6pm"
              },
              {
-                 "thursday": "7am-3pm"
+                 "thursday": "Thursday: 7am to 3pm"
              },
              {
-                 "friday": "7am-3pm"
+                 "friday": "Friday: 7am to 3pm"
              },
              {
-                 "saturday": "7am-3pm"
+                 "saturday": "Saturday: 7am to 3pm"
              },
              {
-                 "sunday":  "Closed"
+                 "sunday":  "Sunday: Closed"
              }
         ]
     },
@@ -182,25 +182,25 @@
          "phone": "131495",
          "Hours":[
              {
-             "Monday": "10:30am-7:15pm"
+             "Monday": "Monday: 10:30am to 7:15pm"
              },
              {
-                 "tuesday": "10am-6:45pm"
+                 "tuesday": "Tuesday: 10am to 6:45pm"
              },
              {
-                 "wednesday": "7:30am-4:45pm"
+                 "wednesday": "Wednesday: 7:30am to 4:45pm"
              },
              {
-                 "thursday": "7am-1:15pm"
+                 "thursday": "Thursday: 7am to 1:15pm"
              },
              {
-                 "friday": "7am-12:45pm"
+                 "friday": "Friday: 7am to 12:45pm"
              },
              {
-                 "saturday": "Closed"
+                 "saturday": "Saturday: Closed"
              },
              {
-                 "sunday":  "7am-12:30pm"
+                 "sunday":  "Sunday: 7am to 12:30pm"
              }
         ]
     },
@@ -211,83 +211,83 @@
          "phone": "131495",
          "Hours":[
              {
-             "Monday": "10am-6pm"
+             "Monday": "Monday: 10am to 6pm"
              },
              {
-                 "tuesday": "7am-12pm"
+                 "tuesday": "Tuesday: 7am to 12pm"
              },
              {
-                 "wednesday": "10am-6pm"
+                 "wednesday": "Wednesday: 10am to 6pm"
              },
              {
-                 "thursday": "7am-2pm"
+                 "thursday": "Thursday: 7am to 2pm"
              },
              {
-                 "friday": "7am-1pm"
+                 "friday": "Friday: 7am to 1pm"
              },
              {
-                 "saturday": "Closed"
+                 "saturday": "Saturday: Closed"
              },
              {
-                 "sunday":  "7am-2pm"
+                 "sunday":  "Sunday: 7am to 2pm"
              }
         ]
     },
     {
         "id": 9,
         "title": "LifeBlood Perth CBD Donor Center",
-         "address": "Gordon Stephenson House, 1/140 William St, Perth WA 6000",
+         "address": "1/140 William St, Perth WA 6000",
          "phone": "131495",
          "Hours":[
              {
-             "Monday": "9am-5:30pm"
+             "Monday": "Monday: 9am to 5:30pm"
              },
              {
-                 "tuesday": "10am-6pm"
+                 "tuesday": "Tuesday: 10am to 6pm"
              },
              {
-                 "wednesday": "10am-6pm"
+                 "wednesday": "Wednesday: 10am to 6pm"
              },
              {
-                 "thursday": "7am-3pm"
+                 "thursday": "Thursday: 7am to 3pm"
              },
              {
-                 "friday": "7am-3pm"
+                 "friday": "Friday: 7am to 3pm"
              },
              {
-                 "saturday": "7am-3pm"
+                 "saturday": "Saturday: 7am to 3pm"
              },
              {
-                 "sunday":  "Closed"
+                 "sunday":  "Sunday: Closed"
              }
         ]
     },
     {
         "id": 10,
         "title": "LifeBlood Perth CBD Donor Center",
-         "address": "Gordon Stephenson House, 1/140 William St, Perth WA 6000",
+         "address": " 1/140 William St, Perth WA 6000",
          "phone": "131495",
          "Hours":[
              {
-             "Monday": "9am-5:30pm"
+             "Monday": "Monday: 9am to 5:30pm"
              },
              {
-                 "tuesday": "10am-6pm"
+                 "tuesday": "Tuesday: 10am to 6pm"
              },
              {
-                 "wednesday": "10am-6pm"
+                 "wednesday": "Wednesday: 10am to 6pm"
              },
              {
-                 "thursday": "7am-3pm"
+                 "thursday": "Thursday: 7am to 3pm"
              },
              {
-                 "friday": "7am-3pm"
+                 "friday": "Friday: 7am to 3pm"
              },
              {
-                 "saturday": "7am-3pm"
+                 "saturday": "Saturday: 7am to 3pm"
              },
              {
-                 "sunday":  "Closed"
+                 "sunday":  "Sunday: Closed"
              }
         ]
     }
