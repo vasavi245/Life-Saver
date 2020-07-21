@@ -2,3 +2,35 @@
     width: 100%;
     height: auto;
 }
+
+.back {
+    background-color:#e02525;
+    display: block;
+    font-weight: bold;
+    color: white;
+    border-radius: 0px 0px 19px 19px;
+    margin-top: 3px;
+}
+
+
+
+.footer {
+ background: #ffffff;
+ position: relative;
+
+ float:left;
+    width:195px;
+    margin-bottom: -2000px;
+    padding-bottom: 2000px;
+    position:relative;/*set containing block for AP children*/
+}
+
+#myimg{
+    position:absolute;
+    width:100px;/*image width*/
+    height:100px;/*image height*/
+    bottom:0px;
+    left:50 37;; /*or proper pixel value*/
+    background: url("../Images/footer.jpg") no-repeat;
+}
+

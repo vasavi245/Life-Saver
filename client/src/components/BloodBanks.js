@@ -4,8 +4,8 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import AddIcCallIcon from '@material-ui/icons/AddIcCall';
-import HomeIcon from '@material-ui/icons/Home';
 import data from "../DonorCenters.json";
+import "../components/pages/Home.css"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,15 +20,14 @@ const useStyles = makeStyles((theme) => ({
      margin: 20,
      borderRadius: 20,
       borderColor: "red",
-      Height:800,  
+      Height:800, 
+      boxShadow: "0 3px 3px rgba(0,0,0,0.12), 0 2px 2px", 
   },
   icon: {
-    verticalAlign: "middle", 
-      alignItems: "center",
-      flexDirection: "row",
-      display: "flex",
-      fontSize: '24px !important',
-    marginBottom: theme.spacing.unit
+   
+    verticalAlign: "middle",
+    position: "relative",
+    
     
   },
  
@@ -47,12 +46,12 @@ export default function BloodBanks() {
           return(  
               <Grid item xs={12} sm={6} md={4} lg={4} xl={4} className={classes.inner} key={items.id}>     
     <Paper display="flex" className={classes.paper} variant="outlined" elevation={3}  >
-      
+     
         <Typography className={classes.title} variant="h5" component="h1">
          {items.title}
         </Typography>
-        <Typography variant="body" component="h3">
-            <HomeIcon className={classes.icon} style={{ display: "block" }} />
+        <Typography variant="body1" component="h3">
+            
           {items.address}
           
         </Typography>
@@ -61,7 +60,9 @@ export default function BloodBanks() {
          {items.phone}
         
         </Typography>
-        <Typography variant="body" component="h4" >
+       
+        <div className="back">
+        <Typography variant="body1" component="h4" >
          Opening hours:
         </Typography>
         
@@ -70,7 +71,7 @@ export default function BloodBanks() {
                 items.Hours.map((hour, i) => {
             return(
                
-        <Typography variant="body" component="p" key={i}>
+        <Typography variant="body1" component="p" key={i}>
          
          {hour.monday} 
          {hour.tuesday} 
@@ -81,9 +82,11 @@ export default function BloodBanks() {
           {hour.sunday} 
            
         </Typography>
+    
             );
          })
         }
+        </div>
         </div>
     
     </Paper>

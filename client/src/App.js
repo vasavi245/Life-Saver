@@ -5,6 +5,7 @@ import Header from "./components/layout/Header";
 import Home from "./components/pages/Home";
 import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
+
 import UserContext from "./context/UserContext";
 
 
@@ -56,6 +57,7 @@ export default function App() {
               <Route path="/login" component={Login} />
               <Route path="/register" component={Register} />
             </Switch>
+          
           </div>
         </UserContext.Provider>
       </BrowserRouter>
