@@ -4,6 +4,22 @@ const userSchema = new mongoose.Schema({
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true, minlength: 5 },
   displayName: { type: String },
+  isDonor: { type: Boolean },
+  donorInfo: {
+    
+    bloodGroup: {type: String, required: true,
+      validate: {
+        validator: function(v) {
+          return/(A|B|AB|O)/.test(v);
+        }
+      },
+    },
+    age: {type:Number},
+    suburb: String,
+    name: String,
+   
+    regEmail: {type: String, unique: true}
+  }
 });
 
 module.exports = User = mongoose.model("user", userSchema);

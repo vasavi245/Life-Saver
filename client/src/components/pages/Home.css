@@ -34,3 +34,29 @@
     background: url("../Images/footer.jpg") no-repeat;
 }
 
+.welcome-msg {
+    text-align: center;
+    color: red;
+    font-size: 50px;
+}
+
+.login-msg {
+    text-align: center;
+    color: black;
+}
+
+.login-msg:hover {
+    color: red;
+}
+
+.close-btn {
+    float: right;
+    color: #e74944;
+  }
+  
+  .donor-dialog {
+
+    border: 2px solid red;
+    
+
+  }

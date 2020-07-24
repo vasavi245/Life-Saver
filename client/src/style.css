@@ -158,6 +158,8 @@ body {
   #header .auth-options button {
     padding: 0 0.5rem;
     font-size: 0.9rem;
+    display: inline-block;
+    margin: 4px 2px;
   }
 }
 
