@@ -57,6 +57,16 @@
   .donor-dialog {
 
     border: 2px solid red;
-    
+    background-image: url("https://www.ubergizmo.com/wp-content/uploads/2013/12/synthetic-rbc.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
 
   }
+
+  .blood-type {
+    width: 100%;
+    height: auto;
+  }
+
+  

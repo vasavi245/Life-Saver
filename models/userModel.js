@@ -7,7 +7,7 @@ const userSchema = new mongoose.Schema({
   isDonor: { type: Boolean },
   donorInfo: {
     
-    bloodGroup: {type: String, required: true,
+    bloodGroup: {type: String,
       validate: {
         validator: function(v) {
           return/(A|B|AB|O)/.test(v);

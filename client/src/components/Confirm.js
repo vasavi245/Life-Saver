@@ -1,10 +1,29 @@
 import React, { Component } from 'react';
 import Dialog from '@material-ui/core/Dialog';
-import AppBar from '@material-ui/core/AppBar';
 import { List, ListItem, ListItemText } from '@material-ui/core/';
+import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import "../components/pages/Home.css";
 
+const useStyles = theme => ({
+    root: {
+      '& > *': {
+        margin: theme.spacing(1.5),
+      },
+    },
+    dialogPaper: {
+        borderRadius: "20px",
+        border: '#FF0000 1px solid',
+        color: "black",
 
+      },
+      btnCont: {
+        backgroundColor: "#00a152",
+      },
+      btnCanel: {
+        backgroundColor: "#c62828",
+    },
+  });
 
 export class Confirm extends Component {
 
@@ -12,8 +31,8 @@ export class Confirm extends Component {
         this.props.handleClose();
     }
 
-  continue = e => {
-    e.preventDefault();
+  continue = () => {
+   
     // PROCESS FORM //
     this.props.nextStep();
   };
@@ -23,7 +42,9 @@ export class Confirm extends Component {
     this.props.prevStep();
   };
 
+ 
   render() {
+    const { classes } = this.props;
     const {
       values: { name, email, Age, suburb, bloodgroup }
     } = this.props;
@@ -33,12 +54,20 @@ export class Confirm extends Component {
           <Dialog
             open
             fullWidth
+            maxWidth='sm'
+            className="donor-dialog"
+            classes={{paper:classes.dialogPaper}}
+            PaperProps={{
+                style: {
+                padding:"20px",
+                },
+            }}
            
           >
-            <AppBar title="Confirm User Data" />
+         
             <List>
               <ListItem>
-                <ListItemText primary="First Name" secondary={name} />
+                <ListItemText primary="Name" secondary={name} />
               </ListItem>
               <ListItem>
                 <ListItemText primary="Email" secondary={email} />
@@ -54,7 +83,7 @@ export class Confirm extends Component {
               </ListItem>
             </List>
             <br />
-
+            <div className={classes.root}>
             <Button
               color="secondary"
               variant="contained"
@@ -62,15 +91,20 @@ export class Confirm extends Component {
             >Back</Button>
 
             <Button
-              color="primary"
+             className={classes.btnCont}
+             color="primary"
               variant="contained"
-              onClick={this.continue}
+              onClick=
+                  {this.continue}
             >Confirm & Continue</Button>
              <Button 
+              className={classes.btnCanel}
+              
             variant="contained"
             onClick={this.closeDialog}>
                 Cancel
             </Button>
+            </div>
           </Dialog>
         </>
 
@@ -78,4 +112,4 @@ export class Confirm extends Component {
   }
 }
 
-export default Confirm;
+export default  withStyles(useStyles)(Confirm);

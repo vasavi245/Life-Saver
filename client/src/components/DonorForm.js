@@ -20,11 +20,11 @@ export class DonorForm extends Component {
             bloodgroup: '',
             showForm: false
           };
-       this.onClick = this.onClick.bind(this);
+       this.onClickOpen = this.onClickOpen.bind(this);
        this.handleClose = this.handleClose.bind(this);
     }
 
-    onClick() {
+    onClickOpen() {
         //on click will change our state
         this.setState({ showForm: true });
     }
@@ -106,7 +106,7 @@ export class DonorForm extends Component {
       const { showForm } = this.state;
       return(
           <nav className="auth-options">
-              <button onClick={this.onClick }>Become A Donor</button>
+              <button onClick={this.onClickOpen }>Become A Donor</button>
               {/* We want to show the form if the state is true */}
               {showForm && this.renderForm()}
           </nav>

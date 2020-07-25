@@ -11,9 +11,9 @@ const donors = await User.find({isDonor: true}).exec();
     }
 });
 
-router.post('/donorpage', async(req,res) => {
+router.post('/donors', async(req,res) => {
     console.log(req.body);
-   const donor = new User({
+   const newDonor = new User({
        name: req.body.name,
        regEmail: req.body.regEmail,
        age: req.body.age,
@@ -21,8 +21,9 @@ router.post('/donorpage', async(req,res) => {
        suburb: req.body.suburb
    });
    try {
-       const savedDonor = await donor.save();
+       const savedDonor = await newDonor.save();
        res.json(savedDonor)
+       
    }
    catch(err){
        res.json({message: err})
@@ -34,11 +35,20 @@ router.post('/donorpage', async(req,res) => {
 } else if (age < 18 || age > 50 ) {
     return res.status(500).json({
         success: false,
-        data: "To Become a registered donor your age must be from 18 to 50"
+        data: "To Become a registered donor you must be aged between 18 and 50"
     })
 }
 
     });
+
+    router.delete("/delete", async (req, res) => {
+        try {
+          const deletedDonor = await User.findByIdAndDelete(req.user);
+          res.json(deletedDonor);
+        } catch (err) {
+          res.status(500).json({ error: err.message });
+        }
+      });
 
 
 

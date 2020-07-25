@@ -1,12 +1,29 @@
 import React, { Component } from 'react';
 import Dialog from '@material-ui/core/Dialog';
-import AppBar from '@material-ui/core/AppBar';
+import { withStyles } from '@material-ui/core/styles';
 import "../components/pages/Home.css";
 
+const useStyles = theme => ({
+    root: {
+      '& > *': {
+        margin: theme.spacing(1),
+      },
+    },
+    dialogPaper: {
+        borderRadius: "20px",
+        border: '#FF0000 1px solid',
+        color: "black",
+
+      },
+     
+  });
 
 
 
 export class Success extends Component {
+
+   
+    
 
     closeDialog = () => {
         this.props.handleClose();
@@ -24,6 +41,7 @@ export class Success extends Component {
   };
 
   render() {
+    const { classes } = this.props;
     return (
 
         <>
@@ -31,8 +49,18 @@ export class Success extends Component {
             open
             fullWidth
             maxWidth='sm'
+            className="donor-dialog"
+            classes={{paper:classes.dialogPaper}}
+            PaperProps={{
+                style: {
+                padding:"20px",
+               
+                
+                },
+                
+            }}
           >
-            <AppBar title="Success" />
+           
             <button className="close-btn" onClick={this.closeDialog} >
       ✗
     </button>
@@ -44,4 +72,4 @@ export class Success extends Component {
   }
 }
 
-export default Success;
+export default  withStyles(useStyles)(Success);

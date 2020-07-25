@@ -1,12 +1,35 @@
 import React, { Component } from 'react';
 import Dialog from '@material-ui/core/Dialog';
 import TextField from '@material-ui/core/TextField';
+import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import "../components/pages/Home.css";
 
 
+const useStyles = theme => ({
+    root: {
+      '& > *': {
+        margin: theme.spacing(1),
+      },
+    },
+    dialogPaper: {
+        borderRadius: "20px",
+        border: '#FF0000 1px solid',
+        color: "black",
+
+      },
+      btnCont: {
+        backgroundColor: "#00a152",
+      },
+      btnCanel: {
+          backgroundColor: "#c62828",
+      }
+  });
+
 
 export  class DonorPersonalDetails extends Component {
+
+   
 
   closeDialog = () => {
       this.props.handleClose();
@@ -15,8 +38,9 @@ export  class DonorPersonalDetails extends Component {
     e.preventDefault();
     this.props.nextStep();
   };
-
+ 
   render() {
+    const { classes } = this.props;
     const { values, handleChange } = this.props;
 
     console.log("this is user reg")
@@ -31,6 +55,15 @@ export  class DonorPersonalDetails extends Component {
             fullWidth
             maxWidth='sm'
             className="donor-dialog"
+            classes={{paper:classes.dialogPaper}}
+            PaperProps={{
+                style: {
+                padding:"20px",
+               
+                
+                },
+                
+            }}
           >
 
            
@@ -39,7 +72,7 @@ export  class DonorPersonalDetails extends Component {
               placeholder="Enter Your First Name"
               label="Name"
               onChange={handleChange('name')}
-              defaultValue={values.name}
+              defaultValue={this.props.name}
               margin="normal"
               
             />
@@ -63,6 +96,7 @@ export  class DonorPersonalDetails extends Component {
             />
             <br />
             <TextField
+            
               placeholder="Enter Your suburb"
               label="Suburb"
               onChange={handleChange('suburb')}
@@ -71,16 +105,20 @@ export  class DonorPersonalDetails extends Component {
               fullWidth
             />
             <br />
+            <div className={classes.root}>
             <Button
+              className={classes.btnCont}
               color="primary"
               variant="contained"
               onClick={this.continue}
             >Continue</Button>
             <Button 
+            className={classes.btnCanel}
             variant="contained"
             onClick={this.closeDialog}>
                 Cancel
             </Button>
+            </div>
           </Dialog>
         </>
        
@@ -89,4 +127,4 @@ export  class DonorPersonalDetails extends Component {
   }
 }
 
-export default DonorPersonalDetails;
+export default  withStyles(useStyles)(DonorPersonalDetails);

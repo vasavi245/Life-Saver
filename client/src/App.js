@@ -5,12 +5,12 @@ import Header from "./components/layout/Header";
 import Home from "./components/pages/Home";
 import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
+import DonorPage from "./components/pages/DonorPage";
 
 import UserContext from "./context/UserContext";
 
-
-
 import "./style.css";
+
 
 export default function App() {
   const [userData, setUserData] = useState({
@@ -56,6 +56,7 @@ export default function App() {
           
               <Route path="/login" component={Login} />
               <Route path="/register" component={Register} />
+              <Route path="/donors" componet={DonorPage} />
             </Switch>
           
           </div>
