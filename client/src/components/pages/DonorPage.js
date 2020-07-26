@@ -3,6 +3,7 @@ import axios from "axios";
 import SavedDonors from "../SavedDonors";
 import Confirm from "../Confirm";
 import API from '../utils/API';
+import DonorForm from '../DonorForm';
 
 
 
@@ -11,15 +12,15 @@ import API from '../utils/API';
 class DonorPage extends Component {
     state= {
         savedDonors : [],
-        confirm: "",
+        change: "",
         error: "",
         message: "",
     };
      
     // handles the confirmed donor
-    handleConfirm = (event) => {
+    handleChange = (event) => {
         event.preventDefault();
-        API.donorPage(this.state.confirm)
+        API.donorPage(this.state.change)
         .then((res) => {
             if (res.data.items === "error") {
                 throw new Error(res.data.items);
@@ -59,7 +60,7 @@ class DonorPage extends Component {
 
         return(
             <div>
-                <Confirm handleConfirm={this.handleConfirm} />
+                <DonorForm handleChange={this.handleChange} />
               <SavedDonors
                   savedDonors={this.state.savedDonors}
                   />

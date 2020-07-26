@@ -6,6 +6,7 @@ import Home from "./components/pages/Home";
 import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
 import DonorPage from "./components/pages/DonorPage";
+import DashboardPage from "./components/pages/Dashboard";
 
 import UserContext from "./context/UserContext";
 
@@ -57,6 +58,7 @@ export default function App() {
               <Route path="/login" component={Login} />
               <Route path="/register" component={Register} />
               <Route path="/donors" componet={DonorPage} />
+              <Route path="/dashboard" component={DashboardPage}/>
             </Switch>
           
           </div>
