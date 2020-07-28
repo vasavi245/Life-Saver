@@ -27,7 +27,7 @@ const useStyles = theme => ({
   });
 
 
-export  class DonorPersonalDetails extends Component {
+export class DonorPersonalDetails extends Component {
 
    
 

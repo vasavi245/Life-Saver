@@ -13,27 +13,6 @@
 }
 
 
-
-.footer {
- background: #ffffff;
- position: relative;
-
- float:left;
-    width:195px;
-    margin-bottom: -2000px;
-    padding-bottom: 2000px;
-    position:relative;/*set containing block for AP children*/
-}
-
-#myimg{
-    position:absolute;
-    width:100px;/*image width*/
-    height:100px;/*image height*/
-    bottom:0px;
-    left:50 37;; /*or proper pixel value*/
-    background: url("../Images/footer.jpg") no-repeat;
-}
-
 .welcome-msg {
     text-align: center;
     color: red;
@@ -68,5 +47,14 @@
     width: 100%;
     height: auto;
   }
+
+  .admin-container {
+    background: #ec008c;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fc6767, #ec008c);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #fc6767, #ec008c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    max-width: 500;
+ 
+  }
+
 
   

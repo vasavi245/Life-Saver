@@ -3,7 +3,7 @@ import DonorPage from "./DonorPage";
 
 function Dashboard() {
     return(
-        <div calssName="dashboard">
+        <div className="dashboard">
           
     <h1>This is admin</h1>
     <div>

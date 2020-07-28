@@ -8,9 +8,11 @@ import Register from "./components/auth/Register";
 import DonorPage from "./components/pages/DonorPage";
 import DashboardPage from "./components/pages/Dashboard";
 
+
 import UserContext from "./context/UserContext";
 
 import "./style.css";
+import { AdminRoute } from "./components/auth/AdminRoute";
 
 
 export default function App() {
@@ -58,7 +60,7 @@ export default function App() {
               <Route path="/login" component={Login} />
               <Route path="/register" component={Register} />
               <Route path="/donors" componet={DonorPage} />
-              <Route path="/dashboard" component={DashboardPage}/>
+              <AdminRoute exact path="/dashboard" component={DashboardPage}/>
             </Switch>
           
           </div>

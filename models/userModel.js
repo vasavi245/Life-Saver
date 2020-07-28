@@ -5,15 +5,12 @@ const userSchema = new mongoose.Schema({
   password: { type: String, required: true, minlength: 5 },
   displayName: { type: String },
   isAdmin: {type: Boolean, default: false},
-  isDonor: { type: Boolean },
+  isDonor: { type: Boolean, default:false },
   donorInfo: {
     
     bloodGroup: {type: String,
-      validate: {
-        validator: function(v) {
-          return/(A|B|AB|O)/.test(v);
-        }
-      },
+      
+      
     },
     age: {type:Number},
     suburb: String,

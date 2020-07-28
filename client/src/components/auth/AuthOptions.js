@@ -16,6 +16,7 @@ export default function AuthOptions() {
 
   const register = () => history.push("/register");
   const login = () => history.push("/login");
+  const admin = () => ("/admin", {isAdmin:true})
   const logout = () => {
     setUserData({
       token: undefined,
@@ -23,7 +24,7 @@ export default function AuthOptions() {
     });
     localStorage.setItem("auth-token", "");
   };
-  
+  console.log(userData.user);
   return (
     <nav className="auth-options">
       {userData.user ? (
@@ -37,6 +38,7 @@ export default function AuthOptions() {
         <>
            <button onClick={login}>Log in</button>
           <button onClick={register}>Register</button>
+          <button onClick={admin}>Admin</button>
          
         </>
       )}

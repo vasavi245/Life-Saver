@@ -6,6 +6,7 @@ import Container from '@material-ui/core/Container';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import { List, ListItem, ListItemText } from '@material-ui/core/';
+import "../components/pages/Home.css";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -25,8 +26,8 @@ const SavedDonors = (props) => {
     return props.savedDonors.length === 0 ? (
         <>
         <CssBaseline />
-        <Container maxWidth='sm'>
-            <Typography component="div" style={{ backgroundColor: '#cfe8fc', height: '100vh' }} >
+        <Container className="admin-container" style={{ height: '100vh' }}>
+            <Typography  component="div"  >
                 <h2>List of Donors</h2>
             </Typography>
         </Container>
@@ -36,8 +37,8 @@ const SavedDonors = (props) => {
     ) : (
         <>
         <CssBaseline />
-        <Container maxWidth='sm'>
-            <Typography component="div" style={{ backgroundColor: '#cfe8fc', height: '100vh' }} >
+        <Container >
+            <Typography className="admin-container" component="div" style={{  height: '100vh' }} >
                 <h2>List of Donors</h2>
             </Typography>
             {props.savedDonors.map((items) => {

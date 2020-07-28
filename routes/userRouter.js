@@ -36,6 +36,7 @@ router.post("/register", async (req, res) => {
       email,
       password: passwordHash,
       displayName,
+      isAdmin,
     });
     const savedUser = await newUser.save();
     res.json(savedUser);
@@ -61,12 +62,13 @@ router.post("/login", async (req, res) => {
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) return res.status(400).json({ msg: "Invalid credentials." });
 
-    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET);
+    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {expiresIn: "1h"});
     res.json({
       token,
       user: {
         id: user._id,
         displayName: user.displayName,
+        isAdmin: user.isAdmin,
       },
     });
   } catch (err) {
@@ -108,4 +110,21 @@ router.get("/", auth, async (req, res) => {
   });
 });
 
+
+router.get("/createadmin", auth, async(req, res) => {
+  console.log(isAdmin)
+  try {
+    const user = new User({
+      name: "Admin-Lifesaver",
+      email: "admin@lifesaver.com",
+      password: "admin-lifesaver",
+      isAdmin: true,
+    
+    })
+const newUser = await user.save();
+res.json(newUser);
+  }catch(err) {
+      res.json({message: err});
+  }
+});
 module.exports = router;

@@ -1,7 +1,7 @@
 import React,{ Component } from 'react';
-import axios from "axios";
+
 import SavedDonors from "../SavedDonors";
-import Confirm from "../Confirm";
+
 import API from '../utils/API';
 import DonorForm from '../DonorForm';
 
@@ -20,7 +20,7 @@ class DonorPage extends Component {
     // handles the confirmed donor
     handleChange = (event) => {
         event.preventDefault();
-        API.donorPage(this.state.change)
+        API.getDonor(this.state.change)
         .then((res) => {
             if (res.data.items === "error") {
                 throw new Error(res.data.items);
@@ -50,7 +50,7 @@ class DonorPage extends Component {
     };
     // grabs all the donors that were saved to the database
     componentDidMount() {
-        axios.get("http://localhost:5000/users/donors")
+        API.getDonors()
         .then((res) => this.setState({ savedDonors: res.data }))
         .catch((err) => console.log(err));
     }
