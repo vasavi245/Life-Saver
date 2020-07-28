@@ -3,21 +3,13 @@ const mongoose = require("mongoose");
 const userSchema = new mongoose.Schema({
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true, minlength: 5 },
-  displayName: { type: String },
-  isAdmin: {type: Boolean, default: false},
-  isDonor: { type: Boolean, default:false },
-  donorInfo: {
+  fullName: { type: String },
     
-    bloodGroup: {type: String,
-      
-      
-    },
-    age: {type:Number},
-    suburb: String,
-    name: String,
-   
-    regEmail: {type: String, unique: true}
-  }
+    bloodGroup: {type: String, },
+    age: {type:Number, min: 18, max:50,},
+    suburb: {type: String, },
+    gender: {type: String, }
+ 
 });
 
 module.exports = User = mongoose.model("user", userSchema);

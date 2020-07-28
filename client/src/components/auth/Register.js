@@ -8,7 +8,11 @@ export default function Register() {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const [passwordCheck, setPasswordCheck] = useState();
-  const [displayName, setDisplayName] = useState();
+  const [fullName, setFullName] = useState();
+  const [gender, setGender] = useState();
+   const [age, setAge] = useState();
+   const [suburb, setSuburb] = useState();
+  const [bloodGroup, setBloodGroup] = useState();
   const [error, setError] = useState();
 
   const { setUserData } = useContext(UserContext);
@@ -17,7 +21,7 @@ export default function Register() {
   const submit = async (e) => {
     e.preventDefault();
     try {
-      const newUser = { email, password, passwordCheck, displayName };
+      const newUser = { email, password, passwordCheck, fullName, gender, age, bloodGroup, suburb };
       await Axios.post("http://localhost:5000/users/register", newUser);
       const loginRes = await Axios.post("http://localhost:5000/users/login", {
         email,
@@ -60,12 +64,41 @@ export default function Register() {
           onChange={(e) => setPasswordCheck(e.target.value)}
         />
 
-        <label htmlFor="register-display-name">Display name</label>
+        <label htmlFor="register-full-name">Full name</label>
         <input
-          id="register-display-name"
+          id="register-full-name"
           type="text"
-          onChange={(e) => setDisplayName(e.target.value)}
+          onChange={(e) => setFullName(e.target.value)}
         />
+
+        <label htmlFor="register-age">Age</label>
+        <input
+          id="register-age"
+          type="text"
+          onChange={(e) => setAge(e.target.value)}
+        />
+        
+        <label htmlFor="register-gender">Gender</label>
+        <input
+          id="register-gender"
+          type="text"
+          onChange={(e) => setGender(e.target.value)}
+        />
+
+<label htmlFor="register-bloodGroup">Blood Group</label>
+        <input
+          id="register-bloodgroup"
+          type="text"
+          onChange={(e) => setBloodGroup(e.target.value)}
+        />
+
+<label htmlFor="register-suburb">Suburb</label>
+        <input
+          id="register-suburb"
+          type="text"
+          onChange={(e) => setSuburb(e.target.value)}
+        />
+
 
         <input type="submit" value="Register" />
       </form>

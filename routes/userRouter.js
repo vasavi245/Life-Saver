@@ -6,11 +6,11 @@ const User = require("../models/userModel");
 
 router.post("/register", async (req, res) => {
   try {
-    let { email, password, passwordCheck, displayName } = req.body;
+    let { email, bloodGroup, suburb, gender, age, fullName, password, passwordCheck } = req.body;
 
     // validate
 
-    if (!email || !password || !passwordCheck)
+    if (!email || !fullName || !age ||!gender ||!bloodGroup ||!suburb ||!password ||!passwordCheck)
       return res.status(400).json({ msg: "Not all fields have been entered." });
     if (password.length < 5)
       return res
@@ -20,6 +20,10 @@ router.post("/register", async (req, res) => {
       return res
         .status(400)
         .json({ msg: "Enter the same password twice for verification." });
+    if (age < age.min || age > age.max)
+    return res
+    .status(400)
+    .json({ msg: "To be approved donor you must be aged between 18 to 50 "});
 
     const existingUser = await User.findOne({ email: email });
     if (existingUser)
@@ -27,7 +31,7 @@ router.post("/register", async (req, res) => {
         .status(400)
         .json({ msg: "An account with this email already exists." });
 
-    if (!displayName) displayName = email;
+    if (!fullName) fullName = email;
 
     const salt = await bcrypt.genSalt();
     const passwordHash = await bcrypt.hash(password, salt);
@@ -35,10 +39,11 @@ router.post("/register", async (req, res) => {
     const newUser = new User({
       email,
       password: passwordHash,
-      displayName,
-      isAdmin,
+      fullName,
+      
     });
     const savedUser = await newUser.save();
+    console.log(savedUser);
     res.json(savedUser);
   } catch (err) {
     res.status(500).json({ error: err.message });
@@ -67,8 +72,8 @@ router.post("/login", async (req, res) => {
       token,
       user: {
         id: user._id,
-        displayName: user.displayName,
-        isAdmin: user.isAdmin,
+        fullName: user.fullName,
+        
       },
     });
   } catch (err) {
@@ -105,7 +110,7 @@ router.post("/tokenIsValid", async (req, res) => {
 router.get("/", auth, async (req, res) => {
   const user = await User.findById(req.user);
   res.json({
-    displayName: user.displayName,
+    fullName: user.fullName,
     id: user._id,
   });
 });

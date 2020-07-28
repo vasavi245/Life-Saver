@@ -18,7 +18,7 @@ if (process.env.NODE_ENV === "production") {
 // Define API routes here
 
 app.use("/users", require("./routes/userRouter"));
-app.use("/donors", require("./routes/donorRouter"));
+
 
 
 const mongoURI = 'mongodb://vasavi:lifesaver245@ds339648.mlab.com:39648/heroku_z7bhk992'
