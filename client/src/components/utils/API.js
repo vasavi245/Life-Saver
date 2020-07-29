@@ -1,12 +1,8 @@
 import axios from "axios";
 
 export default {
-    getDonors: function() {
-        return axios.get("/donors");
-    },
-    
-    donorPage: function (savedDonors) {
-        return axios.post("/donors", savedDonors)
+    // get the users to display
+    getUsers: function() {
+        return axios.get("/users");
     }
-
 }

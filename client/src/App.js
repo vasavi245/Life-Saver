@@ -5,14 +5,16 @@ import Header from "./components/layout/Header";
 import Home from "./components/pages/Home";
 import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
+import About from "./components/About";
 import DonorPage from "./components/pages/DonorPage";
-import DashboardPage from "./components/pages/Dashboard";
+
+
 
 
 import UserContext from "./context/UserContext";
 
 import "./style.css";
-import { AdminRoute } from "./components/auth/AdminRoute";
+
 
 
 export default function App() {
@@ -59,8 +61,9 @@ export default function App() {
           
               <Route path="/login" component={Login} />
               <Route path="/register" component={Register} />
-              <Route path="/donors" componet={DonorPage} />
-              <AdminRoute exact path="/dashboard" component={DashboardPage}/>
+              <Route path="/about" component={About}/>  
+              <Route path="/users" component={DonorPage}  />     
+              
             </Switch>
           
           </div>

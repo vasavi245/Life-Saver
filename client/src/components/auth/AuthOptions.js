@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
 import { useHistory } from "react-router-dom";
 import UserContext from "../../context/UserContext";
-import DonorForm from "../DonorForm";
+
+
 
 
 
@@ -16,6 +17,8 @@ export default function AuthOptions() {
 
   const register = () => history.push("/register");
   const login = () => history.push("/login");
+  const about = () => history.push("/about");
+  const users = () => history.push("/users");
   const logout = () => {
     setUserData({
       token: undefined,
@@ -30,13 +33,14 @@ export default function AuthOptions() {
         <>
          
         <button onClick={logout}>Log out</button>
-        <DonorForm />
+        <button onClick={users}>List of Donors</button>
        
         </>
       ) : (
         <>
            <button onClick={login}>Log in</button>
           <button onClick={register}>Register</button>
+          <button onClick={about}>About us</button>
           
          
         </>

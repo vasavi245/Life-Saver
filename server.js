@@ -21,7 +21,7 @@ app.use("/users", require("./routes/userRouter"));
 
 
 
-const mongoURI = 'mongodb://vasavi:lifesaver245@ds339648.mlab.com:39648/heroku_z7bhk992'
+const mongoURI = 'mongodb://sindhu:lifesaver3@ds135128.mlab.com:35128/heroku_3bq6z850'
 
 mongoose
   .connect(

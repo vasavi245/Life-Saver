@@ -20,10 +20,7 @@ router.post("/register", async (req, res) => {
       return res
         .status(400)
         .json({ msg: "Enter the same password twice for verification." });
-    if (age < age.min || age > age.max)
-    return res
-    .status(400)
-    .json({ msg: "To be approved donor you must be aged between 18 to 50 "});
+   
 
     const existingUser = await User.findOne({ email: email });
     if (existingUser)
@@ -113,6 +110,19 @@ router.get("/", auth, async (req, res) => {
     fullName: user.fullName,
     id: user._id,
   });
+});
+
+router.get("/users", auth, async(req, res) => {
+  const user = await User.find(req.user);
+  res.json({
+    fullName: user.fullName,
+    age: user.age,
+    gender: user.gender,
+    bloodGroup: user.bloodGroup,
+    suburb: user.suburb,
+
+  });
+  console.log(res.json);
 });
 
 

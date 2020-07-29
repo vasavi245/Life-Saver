@@ -38,9 +38,9 @@ const SavedDonors = (props) => {
         <>
         <CssBaseline />
         <Container >
-            <Typography className="admin-container" component="div" style={{  height: '100vh' }} >
+           
                 <h2>List of Donors</h2>
-            </Typography>
+           
             {props.savedDonors.map((items) => {
                 return(
                     <div className={classes.root}>
@@ -49,10 +49,10 @@ const SavedDonors = (props) => {
                <Paper className={classes.paper}>
                    <List>
                        <ListItem>
-                           <ListItemText primary={items.name} />
+                           <ListItemText primary={items.fullName} />
                        </ListItem>
                        <ListItem>
-                           <ListItemText primary={items.regEmail} />
+                           <ListItemText primary={items.email} />
                        </ListItem>
                        <ListItem>
                            <ListItemText primary={items.age} />

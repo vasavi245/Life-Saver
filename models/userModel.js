@@ -6,7 +6,7 @@ const userSchema = new mongoose.Schema({
   fullName: { type: String },
     
     bloodGroup: {type: String, },
-    age: {type:Number, min: 18, max:50,},
+    age: {type:Number, },
     suburb: {type: String, },
     gender: {type: String, }
  

@@ -18,7 +18,7 @@ export default function Home() {
       {userData.user ? (
         <div>
           <Fade right>
-        <h1 className="welcome-msg">Welcome {userData.user.displayName}</h1>
+        <h1 className="welcome-msg">Welcome {userData.user.fullName}</h1>
         </Fade>
         <div className="places">
         <Typography variant="h3" component="h4" style={{textAlign: "center", fontStyle: "italic",}}>

@@ -57,4 +57,24 @@
   }
 
 
-  
+  /* About*/
+
+  .about-cont {
+    position: relative;
+    height: 200px;
+    background-image: linear-gradient(#e62211, #ff6126);
+    border-bottom-left-radius: 50% 20%;
+    border-bottom-right-radius: 50% 20%;
+    margin: 2px;
+ 
+  }
+
+  .about-heading {
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding: 100px 0;
+      font: 44px "Arial";
+      
+      
+  }

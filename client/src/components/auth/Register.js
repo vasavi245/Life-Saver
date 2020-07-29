@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 import UserContext from "../../context/UserContext";
 import Axios from "axios";
 import ErrorNotice from "../misc/ErrorNotice";
+import image from "../Images/reg-blood.jpg";
 
 export default function Register() {
   const [email, setEmail] = useState();
@@ -40,7 +41,9 @@ export default function Register() {
 
   return (
     <div className="page">
-      <h2>Register</h2>
+            <img src={image} alt="reg" className="reg-image" style={{display: "block", marginLeft:"auto", marginRight:"auto" }}/>
+      <h2 style={{textAlign: "center"}}>Please fill in your details to Become a Donor </h2>
+
       {error && (
         <ErrorNotice message={error} clearError={() => setError(undefined)} />
       )}

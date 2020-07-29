@@ -6,9 +6,11 @@ export default function Header() {
   return (
     <header id="header">
       <Link to="/">
-        <h1 className="title">Life Saver</h1>
+        <h1 className="title">Life Saver √v^√v^√♥</h1>
       </Link>
+  
       <AuthOptions />
+  
     </header>
   );
 }
