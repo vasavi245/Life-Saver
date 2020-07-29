@@ -10,8 +10,12 @@ class DonorPage extends Component {
     // when this component mounts, grabs all the users data
     componentDidMount() {
         API.getUsers()
-        .then((res) => this.setState({ savedDonors: res.data}))
+        .then((res) => {
+            console.log(res);
+            this.setState({ savedDonors: res.data.users})
+        })
         .catch((err) => console.log(err));
+       
         
     }
    

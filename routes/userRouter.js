@@ -37,6 +37,7 @@ router.post("/register", async (req, res) => {
       email,
       password: passwordHash,
       fullName,
+      isAdmin: true,
       
     });
     const savedUser = await newUser.save();
@@ -112,16 +113,9 @@ router.get("/", auth, async (req, res) => {
   });
 });
 
-router.get("/users", auth, async(req, res) => {
-  const user = await User.find(req.user);
-  res.json({
-    fullName: user.fullName,
-    age: user.age,
-    gender: user.gender,
-    bloodGroup: user.bloodGroup,
-    suburb: user.suburb,
-
-  });
+router.get("/donors", auth, async(req, res) => {
+  const users = await User.find({}).select('-password');
+  res.json({users});
   console.log(res.json);
 });
 

@@ -8,7 +8,8 @@ const userSchema = new mongoose.Schema({
     bloodGroup: {type: String, },
     age: {type:Number, },
     suburb: {type: String, },
-    gender: {type: String, }
+    gender: {type: String, },
+    isAdmin: {type: Boolean, default:false}
  
 });
 
