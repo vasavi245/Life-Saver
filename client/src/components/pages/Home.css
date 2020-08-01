@@ -33,27 +33,14 @@
     color: #e74944;
   }
   
-  .donor-dialog {
-
-    border: 2px solid red;
-    background-image: url("https://www.ubergizmo.com/wp-content/uploads/2013/12/synthetic-rbc.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-
-
-  }
-
-  .blood-type {
-    width: 100%;
-    height: auto;
-  }
-
-  .admin-container {
+ 
+  .list {
     background: #ec008c;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #fc6767, #ec008c);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #fc6767, #ec008c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    max-width: 500;
- 
+
+    justify-content: center;
+  
   }
 
 
@@ -76,5 +63,11 @@
       padding: 100px 0;
       font: 44px "Arial";
       
+      
+  }
+
+  /*list of donors*/
+  .list-wrap > div {
+      display: inline-block;
       
   }

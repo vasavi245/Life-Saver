@@ -60,9 +60,10 @@ body {
 #header {
   height: 50px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+
+  justify-content: space-evenly;
   background-color: #e02525;
+  align-items: center;
 }
 #header .title {
   margin: 0;
@@ -76,10 +77,10 @@ body {
 }
 #header .auth-options button {
   padding: 0 1rem;
-  background-color: #b91b1b;
+  display: block;
   color: #ffffff;
   font-size: 1.1rem;
-  border: 3px solid grey;
+outline: none;
 
 }
 #header .auth-options button:hover {
@@ -121,16 +122,6 @@ body {
   font-size: 1.1rem;
 }
 
-/* todo list */
-
-.todo-list ul {
-  list-style: disc;
-  cursor: pointer;
-}
-
-.todo-list li:hover {
-  text-decoration: line-through;
-}
 
 /* error notice */
 
@@ -157,10 +148,12 @@ body {
 @media screen and (max-width: 550px) {
   #header .title {
     font-size: 1.2rem;
+    align-self: center;
   }
   #header .auth-options button {
     padding: 0 0.5rem;
     font-size: 0.9rem;
+ 
   }
 }
 

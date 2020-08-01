@@ -13,11 +13,17 @@ const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
     },
-    paper: {
+   
+paper: {
       padding: theme.spacing(2),
       textAlign: 'center',
-      color: theme.palette.text.secondary,
+      color: theme.palette.text.primary,
+      display: 'flex',
     },
+    ListItem: {
+        display: 'inline-block',
+    },
+   
   }));
 
 const SavedDonors = (props) => {
@@ -37,30 +43,34 @@ const SavedDonors = (props) => {
     ) : (
         <>
         <CssBaseline />
-        <Container >
+        <Container fixed  className="admin-container" style={{ height: '100vh' }}>
            
                 <h2>List of Donors</h2>
            
             {props.savedDonors.map((items) => {
                 return(
-                    <div className={classes.root}>
-                <Grid container spacing={3}>
+                    <div className={classes.root} key={items.fullName}>
+                <Grid container  
+  direction="row"
+  justify="center"
+  alignItems="center"
+ spacing={6}>
                <Grid item xs={12}>
-               <Paper className={classes.paper}>
-                   <List>
-                       <ListItem>
+               <Paper className={classes.paper} className="list" >
+                   <List className="list-wrap" >
+                       <ListItem className={classes.ListItem}>
                            <ListItemText primary={items.fullName} />
                        </ListItem>
-                       <ListItem>
+                       <ListItem className={classes.ListItem}>
                            <ListItemText primary={items.email} />
                        </ListItem>
-                       <ListItem>
+                       <ListItem className={classes.ListItem}>
                            <ListItemText primary={items.age} />
                        </ListItem>
-                       <ListItem>
+                       <ListItem className={classes.ListItem}>
                            <ListItemText primary={items.suburb} />
                        </ListItem>
-                       <ListItem>
+                       <ListItem className={classes.ListItem}>
                            <ListItemText primary={items.bloodGroup} />
                        </ListItem>
                    </List>
