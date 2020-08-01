@@ -1,29 +1,35 @@
-# Create React Express App
+# Life-Saver
+![GitHub repo size](https://img.shields.io/github/repo-size/vasavi245/Life-Saver)
+![GitHub issues](https://img.shields.io/github/issues/vasavi245/Life-saver)
+![GitHub last commit](https://img.shields.io/github/last-commit/vasavi245/Life-Saver)
+## Description
+Blood is the most precious gift that anyone can give to another person — the gift of life. A decision to donate your blood can save a life, or even several if your blood is separated into its components — red cells, platelets and plasma — which can be used individually for patients with specific conditions.
 
-## About This Boilerplate
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
+This is the Blood-Bank Managment application made with mongoDB, express, React and NodeJS, this application allows the user to register and Become a donor then the donor will be provided with the instructions for testing after whic to be approved by the management.
 
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
-
-## Starting the app locally
-
-Start by installing front and backend dependencies. While in this directory, run the following command:
-
-```
-npm install
-```
-
-This should install node modules within the server and the client folder.
-
-After both installations complete, run the following command in your terminal:
-
-```
-npm start
-```
-
-Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
-
-## Deployment (Heroku)
-
-To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.
+  ## Table of Contents
+  1. [Installation](#Installation)
+  2. [Usage](#Usage)
+  3. [Contributing](#Contributing)
+  4. [Licence](#License)
+  5. [Questions](#Questions)
+  6. [Links](#Links)
+  ## Installation
+  To install necessary dependencies, run the following commands:
+  * Create-react-app
+  * npm i express
+  * npm i mongo
+  ## Usage
+  video demonastrating the app functionality
+  
+  ## Contributing
+   UWA Coding Bootcamp
+  ## License
+ ![GitHub](https://img.shields.io/github/license/Vasavi245/Life-Saver?style=plastic)
+  ## Questions
+  * <img src="https://avatars0.githubusercontent.com/u/58574509?v=4" alt="avatar" style="border-radius: 16px" width="150" />
+  If you have any questions about the repo, open an issue or contact [vasavi245](https://api.github.com/users/vasavi245) directly at r.vasavi04@gmail.com
+  ## Links
+  * https://all-about-blood.herokuapp.com/
+  * https://github.com/vasavi245/Life-Saver

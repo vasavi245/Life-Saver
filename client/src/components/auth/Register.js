@@ -34,6 +34,7 @@ export default function Register() {
       });
       localStorage.setItem("auth-token", loginRes.data.token);
       history.push("/");
+      alert("Thank you for you contribution, You will soon get an email with more information")
     } catch (err) {
       err.response.data.msg && setError(err.response.data.msg);
     }

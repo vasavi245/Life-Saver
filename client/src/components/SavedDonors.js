@@ -7,6 +7,7 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import { List, ListItem, ListItemText } from '@material-ui/core/';
 import "../components/pages/Home.css";
+import Avatar from '@material-ui/core/Avatar';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -23,6 +24,7 @@ paper: {
     ListItem: {
         display: 'inline-block',
     },
+    
    
   }));
 
@@ -54,9 +56,10 @@ const SavedDonors = (props) => {
   direction="row"
   justify="center"
   alignItems="center"
- spacing={6}>
-               <Grid item xs={12}>
+ spacing={2}>
+               <Grid item xs={10}>
                <Paper className={classes.paper} className="list" >
+               <Avatar className={classes.avatar} src="/broken-image.jpg" />
                    <List className="list-wrap" >
                        <ListItem className={classes.ListItem}>
                            <ListItemText primary={items.fullName} />

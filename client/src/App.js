@@ -5,7 +5,7 @@ import Header from "./components/layout/Header";
 import Home from "./components/pages/Home";
 import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
-import About from "./components/About";
+import About from "./components/pages/About";
 import DonorPage from "./components/pages/DonorPage";
 
 
