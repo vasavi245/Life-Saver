@@ -19,6 +19,7 @@ export default function AuthOptions() {
   const login = () => history.push("/login");
   const about = () => history.push("/about");
   const users = () => history.push("/users");
+  const contact = () => history.push("/contact")
   const logout = () => {
     setUserData({
       token: undefined,
@@ -40,7 +41,8 @@ export default function AuthOptions() {
         <>
            <button onClick={login}>Log in</button>
           <button onClick={register}>Register</button>
-          <button onClick={about}>About us</button>
+          <button onClick={about}>About</button>
+          <button onClick={contact}>Contact</button>
           
          
         </>
