@@ -5,26 +5,18 @@ import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import { List, ListItem, ListItemText } from '@material-ui/core/';
 import "../components/pages/Home.css";
-import Avatar from '@material-ui/core/Avatar';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
 
 
 const useStyles = makeStyles((theme) => ({
     root: {
-      flexGrow: 1,
+    width: "100%",
     },
-   
-paper: {
-      padding: theme.spacing(2),
-      textAlign: 'center',
-      color: theme.palette.text.primary,
-      display: 'flex',
-    },
-    ListItem: {
-        display: 'inline-block',
-    },
-    
    
   }));
 
@@ -47,42 +39,55 @@ const SavedDonors = (props) => {
         <CssBaseline />
         <Container fixed  className="admin-container" style={{ height: '100vh' }}>
            
-                <h2>List of Donors</h2>
+                <h2 style={{textAlign:'center'}}>List of Donors</h2>
            
-            {props.savedDonors.map((items) => {
+                    <div className={classes.root}>
+                <Grid container
+      direction="row"
+      justify="center"
+      alignItems="center"
+      spacing={4}>
+               <Grid item xs={12}>
+               <Paper className="list" style={{width:"100%", marginTop: "10px",  overflow: "auto"}} >
+                <Table style={{ minWidth:700 }}>
+               <TableHead>
+          <TableRow>
+           
+            <TableCell >Name</TableCell>
+            <TableCell >Email</TableCell>
+            <TableCell >Gender</TableCell>
+            <TableCell >Age</TableCell>
+            <TableCell >BloodGroup</TableCell>
+            <TableCell >Suburb</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+        {props.savedDonors.map((items) => {
                 return(
-                    <div className={classes.root} key={items.fullName}>
-                <Grid container  
-  direction="row"
-  justify="center"
-  alignItems="center"
- spacing={2}>
-               <Grid item xs={10}>
-               <Paper className={classes.paper} className="list" >
-               <Avatar className={classes.avatar} src="/broken-image.jpg" />
-                   <List className="list-wrap" >
-                       <ListItem className={classes.ListItem}>
-                           <ListItemText primary={items.fullName} />
-                       </ListItem>
-                       <ListItem className={classes.ListItem}>
-                           <ListItemText primary={items.email} />
-                       </ListItem>
-                       <ListItem className={classes.ListItem}>
-                           <ListItemText primary={items.age} />
-                       </ListItem>
-                       <ListItem className={classes.ListItem}>
-                           <ListItemText primary={items.suburb} />
-                       </ListItem>
-                       <ListItem className={classes.ListItem}>
-                           <ListItemText primary={items.bloodGroup} />
-                       </ListItem>
-                   </List>
+        
+              
+               <TableRow key={items.fullName}>
+                 
+               <TableCell component="th" scope="row">
+                 {items.fullName}
+               </TableCell>
+               <TableCell >{items.email}</TableCell>
+               <TableCell >{items.gender}</TableCell>
+               <TableCell >{items.age}</TableCell>
+               <TableCell >{items.bloodGroup}</TableCell>
+               <TableCell >{items.suburb}</TableCell>
+             </TableRow>
+
+                 );
+            })}
+                      
+         </TableBody>
+            </Table>
                </Paper>
               </Grid>
               </Grid>
             </div>
-                );
-            })}
+              
 
 
         </Container>

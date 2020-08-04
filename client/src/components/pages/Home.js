@@ -4,9 +4,10 @@ import image from "../Images/blood-image.jpg";
 import "./Home.css";
 import Fade from "react-reveal/Fade";
 import UserContext from "../../context/UserContext";
-import Typography from '@material-ui/core/Typography';
-import BloodBanks from "../BloodBanks";
 
+import image1 from "../Images/benefits.jpg";
+import image2 from "../Images/savelife.png";
+import image4 from "../Images/donated-blood.png";
 
 
 
@@ -20,14 +21,11 @@ export default function Home() {
           <Fade right>
         <h1 className="welcome-msg">Welcome {userData.user.fullName}</h1>
         </Fade>
-        <div className="places">
-        <Typography variant="h3" component="h4" style={{textAlign: "center", fontStyle: "italic",}}>
-          List of Blood Banks in and around Perth
-        </Typography>
-        <Fade bottom>
-       <BloodBanks />
-       </Fade>
-        </div>
+       <div>
+       <img src={image4} alt="donor" className="home-page-image" />
+       </div>
+        
+        
         
 
         </div>
@@ -38,8 +36,17 @@ export default function Home() {
       ) : (
         <>
          
-          <Link to="/login"> <h2 className="login-msg">Click here to login</h2></Link>
+         
           <img src={image} alt="blood" className="responsive" />
+          
+          <div id="header">
+          <Link to="/Register"> <h2 className="login-msg">Click here to Register as Donor</h2></Link>
+          </div>
+          <div className="benefits">
+            <img src={image1} alt="benefits" className="bene-image" /><img src={image2} alt="save" className="bene-image" />
+          </div>
+         
+
         </>
       )}
     </div>

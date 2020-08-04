@@ -11,7 +11,7 @@ class DonorPage extends Component {
     componentDidMount() {
         API.getUsers()
         .then((res) => {
-            console.log(res);
+            
             this.setState({ savedDonors: res.data.users})
         })
         .catch((err) => console.log(err));

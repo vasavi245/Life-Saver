@@ -32,8 +32,8 @@
 
     {
         "id": 2,
-        "title": "LifeBlood Midland Donor Center",
-         "address": "233 Great Eastern Hwy, Midland WA 6056",
+        "title": "Life Saver Donor Center",
+         "address": " Midland WA ",
          "phone": "100000",
          "Hours":[
              {
@@ -61,7 +61,7 @@
     },
     {
         "id": 3,
-        "title": "LifeSaver Donor Center",
+        "title": "Life Saver Donor Center",
          "address": " Como WA 6062",
          "phone": "100000",
          "Hours":[

@@ -125,20 +125,26 @@ router.get("/donors", auth, async(req, res) => {
 });
 
 
-router.get("/createadmin", auth, async(req, res) => {
-  console.log(isAdmin)
-  try {
-    const user = new User({
-      name: "Admin-Lifesaver",
-      email: "admin@lifesaver.com",
-      password: "admin-lifesaver",
-      isAdmin: true,
-    
-    })
-const newUser = await user.save();
-res.json(newUser);
-  }catch(err) {
-      res.json({message: err});
-  }
+//router.get("/admin", auth, {isAdmin:true}, async(req, res) => {
+ // const users = await User.findById(req.user)
+  //console.log(isAdmin)
+  
+//const newUser = await user.save();
+//res.json(newUser);
+  //}catch(err) {
+    //  res.json({message: err});
+  //}
+//});
+
+router.get('/isadmin', auth, function (req, res) {
+  User.findById(req.user, function (err, user) {
+    if (user.isAdmin == true) {
+      console.log(user);
+        res.send(user);
+      
+    } else {
+        return res.status(400).send({ message: 'User is not Admin' });
+    }
+  });
 });
 module.exports = router;

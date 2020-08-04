@@ -11,10 +11,12 @@ import DonorPage from "./components/pages/DonorPage";
 
 
 
+
 import UserContext from "./context/UserContext";
 
 import "./style.css";
 import Contact from "./components/pages/Contact";
+import AdminRoute from "./components/auth/AdminRoute";
 
 
 
@@ -64,7 +66,8 @@ export default function App() {
               <Route path="/register" component={Register} />
               <Route path="/about" component={About}/>  
               <Route path="/users" component={DonorPage}  />  
-              <Route path="/contact" component={Contact} />   
+              <Route path="/contact" component={Contact} /> 
+              <Route path="/isadmin" component={AdminRoute} />  
               
             </Switch>
           

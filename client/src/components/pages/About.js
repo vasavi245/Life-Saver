@@ -42,7 +42,7 @@ export default function About() {
 
               </Typography>
               <Typography component="h6" variant="h5">
-              At any point of time the people who are in need can reach the donors through our search facility. By mobilizing people and organization who desire to make a difference in the lives of people in need. On the basis of humanity, Everyone is welcome to register as a blood donor.
+              At any point of time the people who are in need can reach the donors by conatcing us. On the basis of humanity, Everyone is welcome to register as a blood donor.
               </Typography>
           </Paper>
         </Grid>
