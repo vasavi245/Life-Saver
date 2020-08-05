@@ -11,9 +11,6 @@ import UserContext from "./context/UserContext";
 import "./style.css";
 import Contact from "./components/pages/Contact";
 
-
-
-
 export default function App() {
   const [userData, setUserData] = useState({
     token: undefined,
@@ -51,20 +48,17 @@ export default function App() {
       <BrowserRouter>
         <UserContext.Provider value={{ userData, setUserData }}>
           <Header />
-       
+
           <div className="container">
             <Switch>
               <Route exact path="/" component={Home} />
-          
+
               <Route path="/login" component={Login} />
               <Route path="/register" component={Register} />
-              <Route path="/about" component={About}/>  
-              <Route path="/users" component={DonorPage}  />  
-              <Route path="/contact" component={Contact} /> 
-         
-              
+              <Route path="/about" component={About} />
+              <Route path="/users" component={DonorPage} />
+              <Route path="/contact" component={Contact} />
             </Switch>
-          
           </div>
         </UserContext.Provider>
       </BrowserRouter>

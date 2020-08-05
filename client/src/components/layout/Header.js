@@ -8,9 +8,7 @@ export default function Header() {
       <Link to="/">
         <h1 className="title">Life Saver √v^√v^√♥</h1>
       </Link>
-  
       <AuthOptions />
-  
     </header>
   );
 }

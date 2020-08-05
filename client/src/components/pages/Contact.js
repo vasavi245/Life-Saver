@@ -12,7 +12,7 @@ import AddIcCallOutlinedIcon from "@material-ui/icons/AddIcCallOutlined";
 import HomeWorkIcon from "@material-ui/icons/HomeWork";
 import "./Home.css";
 import Fade from "react-reveal/Fade";
-import Typography from '@material-ui/core/Typography';
+import Typography from "@material-ui/core/Typography";
 import BloodBanks from "../BloodBanks";
 
 const useStyles = makeStyles((theme) => ({
@@ -87,13 +87,17 @@ export default function Contact() {
         </Grid>
       </section>
       <div className="places">
-        <Typography variant="h3" component="h4" style={{textAlign: "center", fontStyle: "italic",}}>
+        <Typography
+          variant="h3"
+          component="h4"
+          style={{ textAlign: "center", fontStyle: "italic" }}
+        >
           List of Blood Banks in and around Perth
         </Typography>
         <Fade bottom>
-       <BloodBanks />
-       </Fade>
-        </div>
+          <BloodBanks />
+        </Fade>
+      </div>
     </div>
   );
 }

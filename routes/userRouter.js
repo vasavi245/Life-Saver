@@ -6,11 +6,29 @@ const User = require("../models/userModel");
 
 router.post("/register", async (req, res) => {
   try {
-    let { email, bloodGroup, suburb, gender, age, fullName, password, passwordCheck } = req.body;
+    let {
+      email,
+      bloodGroup,
+      suburb,
+      gender,
+      age,
+      fullName,
+      password,
+      passwordCheck,
+    } = req.body;
 
     // validate
 
-    if (!email || !fullName || !age ||!gender ||!bloodGroup ||!suburb ||!password ||!passwordCheck)
+    if (
+      !email ||
+      !fullName ||
+      !age ||
+      !gender ||
+      !bloodGroup ||
+      !suburb ||
+      !password ||
+      !passwordCheck
+    )
       return res.status(400).json({ msg: "Not all fields have been entered." });
     if (password.length < 5)
       return res
@@ -20,7 +38,6 @@ router.post("/register", async (req, res) => {
       return res
         .status(400)
         .json({ msg: "Enter the same password twice for verification." });
-   
 
     const existingUser = await User.findOne({ email: email });
     if (existingUser)
@@ -42,8 +59,6 @@ router.post("/register", async (req, res) => {
       suburb,
       gender,
       isAdmin: false,
-
-      
     });
     const savedUser = await newUser.save();
     console.log(savedUser);
@@ -70,7 +85,9 @@ router.post("/login", async (req, res) => {
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) return res.status(400).json({ msg: "Invalid credentials." });
 
-    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {expiresIn: "1h"});
+    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
+      expiresIn: "1h",
+    });
     res.json({
       token,
       user: {
@@ -118,18 +135,16 @@ router.get("/", auth, async (req, res) => {
   });
 });
 
-router.get("/donors", auth, async(req, res) => {
+router.get("/donors", auth, async (req, res) => {
   console.log("donor hit");
-  User.findById(req.user, async function(err, user) {
-    
+  User.findById(req.user, async function (err, user) {
     if (user.isAdmin == true) {
-      const users = await User.find({}).select('-password');
-      res.json({users});
+      const users = await User.find({}).select("-password");
+      res.json({ users });
     } else {
-        return res.status(403).send({ message: 'User is not Admin' });
+      return res.status(403).send({ message: "User is not Admin" });
     }
   });
-  
 });
 
 module.exports = router;

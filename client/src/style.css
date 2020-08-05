@@ -69,7 +69,7 @@ body {
   margin: 0;
   padding: 0 1rem;
   color: #ffffff;
-  font-style: oblique
+  font-style: oblique;
 }
 #header .auth-options {
   height: 100%;
@@ -80,8 +80,7 @@ body {
   display: block;
   color: #ffffff;
   font-size: 1.1rem;
-outline: none;
-
+  outline: none;
 }
 #header .auth-options button:hover {
   background-color: #be3a3a;
@@ -122,7 +121,6 @@ outline: none;
   font-size: 1.1rem;
 }
 
-
 /* error notice */
 
 .error-notice {
@@ -153,17 +151,16 @@ outline: none;
   #header .auth-options button {
     padding: 0 0.5rem;
     font-size: 0.9rem;
- 
   }
 }
 
 .icon_home {
-  font-family: 'Material Icons';
-  font-feature-settings: 'liga';
+  font-family: "Material Icons";
+  font-feature-settings: "liga";
   font-weight: normal;
   font-style: normal;
-  font-size:inherit;
-  line-height:inherit;
+  font-size: inherit;
+  line-height: inherit;
   vertical-align: top;
   display: inline-block;
 
@@ -172,9 +169,8 @@ outline: none;
   word-wrap: normal;
   white-space: nowrap;
   direction: ltr;
- 
+
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
 }
-

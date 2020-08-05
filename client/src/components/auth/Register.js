@@ -11,8 +11,8 @@ export default function Register() {
   const [passwordCheck, setPasswordCheck] = useState();
   const [fullName, setFullName] = useState();
   const [gender, setGender] = useState();
-   const [age, setAge] = useState();
-   const [suburb, setSuburb] = useState();
+  const [age, setAge] = useState();
+  const [suburb, setSuburb] = useState();
   const [bloodGroup, setBloodGroup] = useState();
   const [error, setError] = useState();
 
@@ -22,7 +22,16 @@ export default function Register() {
   const submit = async (e) => {
     e.preventDefault();
     try {
-      const newUser = { email, password, passwordCheck, fullName, gender, age, bloodGroup, suburb };
+      const newUser = {
+        email,
+        password,
+        passwordCheck,
+        fullName,
+        gender,
+        age,
+        bloodGroup,
+        suburb,
+      };
       await Axios.post("http://localhost:5000/users/register", newUser);
       const loginRes = await Axios.post("http://localhost:5000/users/login", {
         email,
@@ -34,7 +43,9 @@ export default function Register() {
       });
       localStorage.setItem("auth-token", loginRes.data.token);
       history.push("/");
-      alert("Thank you for you contribution, You will soon get an email with more information")
+      alert(
+        "Thank you for you contribution, You will soon get an email with more information"
+      );
     } catch (err) {
       err.response.data.msg && setError(err.response.data.msg);
     }
@@ -42,8 +53,15 @@ export default function Register() {
 
   return (
     <div className="page">
-            <img src={image} alt="reg" className="reg-image" style={{display: "block", marginLeft:"auto", marginRight:"auto" }}/>
-      <h2 style={{textAlign: "center"}}>Please fill in your details to Become a Donor </h2>
+      <img
+        src={image}
+        alt="reg"
+        className="reg-image"
+        style={{ display: "block", marginLeft: "auto", marginRight: "auto" }}
+      />
+      <h2 style={{ textAlign: "center" }}>
+        Please fill in your details to Become a Donor{" "}
+      </h2>
 
       {error && (
         <ErrorNotice message={error} clearError={() => setError(undefined)} />
@@ -81,7 +99,7 @@ export default function Register() {
           type="text"
           onChange={(e) => setAge(e.target.value)}
         />
-        
+
         <label htmlFor="register-gender">Gender</label>
         <input
           id="register-gender"
@@ -89,20 +107,19 @@ export default function Register() {
           onChange={(e) => setGender(e.target.value)}
         />
 
-<label htmlFor="register-bloodGroup">Blood Group</label>
+        <label htmlFor="register-bloodGroup">Blood Group</label>
         <input
           id="register-bloodgroup"
           type="text"
           onChange={(e) => setBloodGroup(e.target.value)}
         />
 
-<label htmlFor="register-suburb">Suburb</label>
+        <label htmlFor="register-suburb">Suburb</label>
         <input
           id="register-suburb"
           type="text"
           onChange={(e) => setSuburb(e.target.value)}
         />
-
 
         <input type="submit" value="Register" />
       </form>

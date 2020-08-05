@@ -1,95 +1,93 @@
 .responsive {
-    width: 100%;
-    height: 100%;
-    justify-content: center;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
 }
 
 .bene-image {
-    width: 50%;
-
-
+  width: 50%;
 }
 
 .home-page-image {
-    width: 100%;
-    height: 100%;
-    justify-content: center;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
 }
 
 .back {
-    background-color:#e02525;
-    display: block;
-    font-weight: bold;
-    color: white;
-    border-radius: 0px 0px 19px 19px;
-    margin-top: 3px;
+  background-color: #e02525;
+  display: block;
+  font-weight: bold;
+  color: white;
+  border-radius: 0px 0px 19px 19px;
+  margin-top: 3px;
 }
 
-
 .welcome-msg {
-    text-align: center;
-    color: red;
-    font-size: 50px;
+  text-align: center;
+  color: red;
+  font-size: 50px;
 }
 
 .login-msg {
-    text-align: center;
-    color: white;
+  text-align: center;
+  color: white;
 }
 
 .login-msg:hover {
-    color: black;
+  color: black;
 }
 
 .close-btn {
-    float: right;
-    color: #e74944;
-  }
-  
- 
-  .list {
-    background: #ec008c;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #fc6767, #ec008c);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #fc6767, #ec008c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  float: right;
+  color: #e74944;
+}
 
-    justify-content: center;
-    width: 100%;
-  
-  }
+.list {
+  background: #ec008c; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #fc6767,
+    #ec008c
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #fc6767,
+    #ec008c
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+  justify-content: center;
+  width: 100%;
+}
 
-  /* About*/
+/* About*/
 
-  .about-cont {
-    position: relative;
-    height: 200px;
-    background-image: linear-gradient(#e62211, #ff6126);
-    border-bottom-left-radius: 50% 20%;
-    border-bottom-right-radius: 50% 20%;
-    margin: 2px;
- 
-  }
+.about-cont {
+  position: relative;
+  height: 200px;
+  background-image: linear-gradient(#e62211, #ff6126);
+  border-bottom-left-radius: 50% 20%;
+  border-bottom-right-radius: 50% 20%;
+  margin: 2px;
+}
 
-  .about-heading {
-      color: white;
-      text-align: center;
-      margin: 0;
-      padding: 100px 0;
-      font: 44px "Arial";
-      
-      
-  }
+.about-heading {
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 100px 0;
+  font: 44px "Arial";
+}
 
-  /*list of donors*/
-  .donor-details > div {
-      display: inline-block;
-      flex-wrap: nowrap;
-      
-  }
+/*list of donors*/
+.donor-details > div {
+  display: inline-block;
+  flex-wrap: nowrap;
+}
 
-  .list-wrap {
-    display: 'flex';
-  flex-wrap: 'wrap';
-    justify-content: 'space-around';
-    overflow: 'hidden'
-  }
+.list-wrap {
+  display: "flex";
+  flex-wrap: "wrap";
+  justify-content: "space-around";
+  overflow: "hidden";
+}
