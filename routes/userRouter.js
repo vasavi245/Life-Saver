@@ -76,7 +76,7 @@ router.post("/login", async (req, res) => {
       user: {
         id: user._id,
         fullName: user.fullName,
-        
+        isAdmin: user.isAdmin,
       },
     });
   } catch (err) {
@@ -119,32 +119,17 @@ router.get("/", auth, async (req, res) => {
 });
 
 router.get("/donors", auth, async(req, res) => {
-  const users = await User.find({}).select('-password');
-  res.json({users});
-  console.log(res.json);
-});
-
-
-//router.get("/admin", auth, {isAdmin:true}, async(req, res) => {
- // const users = await User.findById(req.user)
-  //console.log(isAdmin)
-  
-//const newUser = await user.save();
-//res.json(newUser);
-  //}catch(err) {
-    //  res.json({message: err});
-  //}
-//});
-
-router.get('/isadmin', auth, function (req, res) {
-  User.findById(req.user, function (err, user) {
+  console.log("donor hit");
+  User.findById(req.user, async function(err, user) {
+    
     if (user.isAdmin == true) {
-      console.log(user);
-        res.send(user);
-      
+      const users = await User.find({}).select('-password');
+      res.json({users});
     } else {
-        return res.status(400).send({ message: 'User is not Admin' });
+        return res.status(403).send({ message: 'User is not Admin' });
     }
   });
+  
 });
+
 module.exports = router;

@@ -34,7 +34,9 @@ export default function AuthOptions() {
         <>
          
         <button onClick={logout}>Log out</button>
+        {userData.user.isAdmin && (
         <button onClick={users}>List of Donors</button>
+        )}
        
         </>
       ) : (
@@ -46,6 +48,7 @@ export default function AuthOptions() {
           
          
         </>
+
       )}
     </nav>
   );

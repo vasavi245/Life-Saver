@@ -48,7 +48,7 @@ export default function Contact() {
           <Grid item xs={12}>
             <Paper className={classes.paper}>
               <h1 style={{ textAlign: "center" }}>
-                Conatact us for urgent needs
+                Contact us for urgent needs
               </h1>
               <List>
                 <ListItem>

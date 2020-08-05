@@ -49,6 +49,9 @@ export default function About() {
         </Grid>
                 </section>
                
+               <div id="header">
+                 <h1 style={{color:"white", textAlign:"center"}}>Who is eligible</h1>
+               </div>
                
                  
             </div>
