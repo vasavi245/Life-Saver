@@ -11,6 +11,7 @@ import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
+import Button from '@material-ui/core/Button';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -53,12 +54,12 @@ const SavedDonors = (props) => {
                <TableHead>
           <TableRow>
            
-            <TableCell >Name</TableCell>
-            <TableCell >Email</TableCell>
-            <TableCell >Gender</TableCell>
-            <TableCell >Age</TableCell>
-            <TableCell >BloodGroup</TableCell>
-            <TableCell >Suburb</TableCell>
+            <TableCell style={{color: "black", fontWeight:"bold", fontSize:"15px"}}>Name</TableCell>
+            <TableCell style={{color: "black", fontWeight:"bold", fontSize:"15px"}}>Email</TableCell>
+            <TableCell style={{color: "black", fontWeight:"bold", fontSize:"15px"}}>Gender</TableCell>
+            <TableCell style={{color: "black", fontWeight:"bold", fontSize:"15px"}}>Age</TableCell>
+            <TableCell style={{color: "black", fontWeight:"bold", fontSize:"15px"}}>BloodGroup</TableCell>
+            <TableCell style={{color: "black", fontWeight:"bold", fontSize:"15px"}}>Suburb</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -68,14 +69,17 @@ const SavedDonors = (props) => {
               
                <TableRow key={items.fullName}>
                  
-               <TableCell component="th" scope="row">
+               <TableCell component="th" scope="row" style={{color: "white", fontWeight:"bold", fontSize:"15px"}}>
                  {items.fullName}
                </TableCell>
-               <TableCell >{items.email}</TableCell>
-               <TableCell >{items.gender}</TableCell>
-               <TableCell >{items.age}</TableCell>
-               <TableCell >{items.bloodGroup}</TableCell>
-               <TableCell >{items.suburb}</TableCell>
+               <TableCell style={{color: "white", fontWeight:"bold", fontSize:"15px"}}>{items.email}</TableCell>
+               <TableCell style={{color: "white", fontWeight:"bold", fontSize:"15px"}} >{items.gender}</TableCell>
+               <TableCell style={{color: "white", fontWeight:"bold", fontSize:"15px"}}>{items.age}</TableCell>
+               <TableCell style={{color: "white", fontWeight:"bold", fontSize:"15px"}}>{items.bloodGroup}</TableCell>
+               <TableCell style={{color: "white", fontWeight:"bold", fontSize:"15px"}}>{items.suburb}</TableCell>
+               <TableCell ><Button variant="contained">
+        Delete
+      </Button></TableCell>
              </TableRow>
 
                  );
