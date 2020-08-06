@@ -11,6 +11,8 @@ import TableBody from "@material-ui/core/TableBody";
 import TableCell from "@material-ui/core/TableCell";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
+import DeleteForeverIcon from '@material-ui/icons/Delete';
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -35,7 +37,7 @@ const SavedDonors = (props) => {
       <CssBaseline />
       <Container fixed className="admin-container" style={{ height: "100vh" }}>
         <h2 style={{ textAlign: "center" }}>List of Donors</h2>
-
+        
         <div className={classes.root}>
           <Grid
             container
@@ -167,6 +169,9 @@ const SavedDonors = (props) => {
                             }}
                           >
                             {items.suburb}
+                          </TableCell>
+                          <TableCell>
+                          <DeleteForeverIcon />
                           </TableCell>
                         </TableRow>
                       );

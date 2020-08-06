@@ -51,7 +51,7 @@ export default function Home() {
             <Grid container spacing={3}>
               <Grid item xs={12}>
                 <Paper className={classes.paper}>
-                  <Typography component="h6" variant="h5">
+                  <Typography style={{fontSize:"20px"}}>
                     Healthy adults aged 17 to 56 are encouraged to donate blood.
                     This is in line with World Health Organisation(WHO)
                     guidelines for ensuring a safe blood supply.All types of
