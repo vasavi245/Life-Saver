@@ -171,7 +171,9 @@ const SavedDonors = (props) => {
                             {items.suburb}
                           </TableCell>
                           <TableCell>
-                          <DeleteForeverIcon />
+                          <DeleteForeverIcon 
+                          id={items._id}
+                          onClick={() => props.handleDelete(items._id)}/>
                           </TableCell>
                         </TableRow>
                       );

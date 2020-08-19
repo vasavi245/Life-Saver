@@ -7,7 +7,10 @@ export default {
         return axios.get("/users/donors",{headers: {"x-auth-token": token}} );
     },
 
-   
+    deleteUser: function(id) {
+        const token = localStorage.getItem("auth-token");
+        return axios.delete("/users/" + id, {headers: {"x-auth-token": token}});
+    }
 
 
     

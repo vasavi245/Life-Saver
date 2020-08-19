@@ -102,12 +102,21 @@ router.post("/login", async (req, res) => {
   }
 });
 
-router.delete("/delete/:id", auth, async (req, res) => {
+router.delete("/:id", auth, async (req, res) => {
   try {
-    const deletedUser = await User.findByIdAndDelete(req.params.id);
-    res.json(deletedUser);
+    const deletedUser = await User.findByIdAndDelete(req.params.id, req.body);
+    res.status(200).json({ deletedUser });
   } catch (err) {
     res.status(500).json({ error: err.message });
+  }
+});
+
+router.put('/:id', async (req, res) => {
+  try {
+    const updatedUser = await Users.findByIdAndUpdate(req.params.id, req.body);
+     res.send({ message: 'The user was updated' });
+  } catch(err) {
+    res.status(400).send({ error: err });
   }
 });
 

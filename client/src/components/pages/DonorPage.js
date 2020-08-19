@@ -17,10 +17,18 @@ class DonorPage extends Component {
       .catch((err) => console.log(err));
   }
 
+  //function to remove user by admin
+  handleDelete = (id) => {
+    API.deleteUser(id)
+    .then((res) => this.componentDidMount())
+    .catch((err) => console.log(err));
+  };
+
   render() {
     return (
       <div>
-        <SavedDonors savedDonors={this.state.savedDonors} />
+        <SavedDonors savedDonors={this.state.savedDonors}
+        handleDelete={this.handleDelete} />
       </div>
     );
   }
