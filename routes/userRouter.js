@@ -111,14 +111,7 @@ router.delete("/:id", auth, async (req, res) => {
   }
 });
 
-router.put('/:id', async (req, res) => {
-  try {
-    const updatedUser = await Users.findByIdAndUpdate(req.params.id, req.body);
-     res.send({ message: 'The user was updated' });
-  } catch(err) {
-    res.status(400).send({ error: err });
-  }
-});
+
 
 router.post("/tokenIsValid", async (req, res) => {
   try {
