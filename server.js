@@ -23,7 +23,7 @@ app.use("/users", require("./routes/userRouter"));
 
  const mongoURI = "mongodb://localhost/bloodweneed"
 //'mongodb://sindhu:lifesaver3@ds135128.mlab.com:35128/heroku_3bq6z850'
-console.log(process.env.MONGODB_URI);
+console.log(process.env.DB_URI);
 mongoose
   .connect(
     process.env.MONGODB_URI ||
