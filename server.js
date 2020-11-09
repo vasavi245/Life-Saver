@@ -26,7 +26,7 @@ app.use("/users", require("./routes/userRouter"));
 console.log(process.env.DB_URI);
 mongoose
   .connect(
-    process.env.MONGODB_URI ||
+    process.env.DB_URI ||
     mongoURI,
     { useNewUrlParser: true }
   )
