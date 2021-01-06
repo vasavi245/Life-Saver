@@ -21,30 +21,22 @@ app.use("/users", require("./routes/userRouter"));
 
 
 
-<<<<<<< HEAD
-const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://sindhu:lifesaver3@cluster-3bq6z850.eu2rc.mongodb.net/bloodweneed?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true });
-client.connect(err => {
-  const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
-  client.close();
-});
-=======
- const mongoURI = "mongodb://localhost/bloodweneed"
-//'mongodb://sindhu:lifesaver3@ds135128.mlab.com:35128/heroku_3bq6z850'
-console.log(process.env.DB_URI);
-mongoose
-  .connect(
-    process.env.DB_URI ||
-    mongoURI,
-    { useNewUrlParser: true }
-  )
- 
-  .then(() => console.log('Go on mongoDB connection successful'))
-  .catch(err =>
-   console.log(err))
->>>>>>> fc54a8809c43ac001628c311b37c3f7345d83f0b
+
+
+const url = `mongodb+srv://sindhu:lifesaver@cluster0.raykg.mongodb.net/bloodweneed?retryWrites=true&w=majority`;
+
+const connectionParams={
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useUnifiedTopology: true 
+}
+mongoose.connect(url,connectionParams)
+    .then( () => {
+        console.log('Connected to database ')
+    })
+    .catch( (err) => {
+        console.error(`Error connecting to the database. \n${err}`);
+    })
 
 
 // Send every other request to the React app
