@@ -21,19 +21,14 @@ app.use("/users", require("./routes/userRouter"));
 
 
 
- const mongoURI = "mongodb://localhost/bloodweneed"
-//'mongodb://sindhu:lifesaver3@ds135128.mlab.com:35128/heroku_3bq6z850'
-console.log(process.env.MONGODB_URI);
-mongoose
-  .connect(
-    process.env.MONGODB_URI ||
-    mongoURI,
-    { useNewUrlParser: true }
-  )
- 
-  .then(() => console.log('Go on mongoDB connection successful'))
-  .catch(err =>
-   console.log(err))
+const MongoClient = require('mongodb').MongoClient;
+const uri = "mongodb+srv://sindhu:lifesaver3@cluster-3bq6z850.eu2rc.mongodb.net/bloodweneed?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true });
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  client.close();
+});
 
 
 // Send every other request to the React app
