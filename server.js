@@ -20,17 +20,14 @@ if (process.env.NODE_ENV === "production") {
 app.use("/users", require("./routes/userRouter"));
 
 
-
-
-
-const url = `mongodb+srv://sindhu:lifesaver@cluster0.raykg.mongodb.net/bloodweneed?retryWrites=true&w=majority`;
+const DB_URI = `mongodb+srv://sindhu:lifesaver@cluster0.raykg.mongodb.net/bloodweneed?retryWrites=true&w=majority`;
 
 const connectionParams={
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true 
 }
-mongoose.connect(url,connectionParams)
+mongoose.connect(DB_URI,connectionParams)
     .then( () => {
         console.log('Connected to database ')
     })
