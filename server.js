@@ -22,7 +22,7 @@ app.use("/users", require("./routes/userRouter"));
 
 
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/bloodweneed", {
+mongoose.connect(process.env.DB_URI || "mongodb://localhost/bloodweneed", {
   useNewUrlParser: true,
   useFindAndModify: false
 });
