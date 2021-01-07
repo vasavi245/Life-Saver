@@ -22,12 +22,21 @@ app.use("/users", require("./routes/userRouter"));
 
 
 
-mongoose.connect(process.env.DB_URI || "mongodb://localhost/bloodweneed", {
-  useNewUrlParser: true,
-  useFindAndModify: false
-});
 
-   
+const url = `mongodb+srv://sindhu:lifesaver@cluster0.raykg.mongodb.net/bloodweneed?retryWrites=true&w=majority`;
+
+const connectionParams={
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useUnifiedTopology: true 
+}
+mongoose.connect(url,connectionParams)
+    .then( () => {
+        console.log('Connected to database ')
+    })
+    .catch( (err) => {
+        console.error(`Error connecting to the database. \n${err}`);
+    })
 
 
 // Send every other request to the React app
